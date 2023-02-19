@@ -1,3 +1,6 @@
+//
+// Created by Varsha on 19-02-2023.
+//
 /*Qn.Write a program to search for a laptop from a binary data file,”Laptop.dat”
 containing objects of laptop defined with model_no,RAM,HDD and other details.
 The user should enter the model no, search and display the details of the particular
@@ -34,7 +37,7 @@ int main(){
     ofstream fob;
     fob.open("Laptop.dat",ios::out | ios::binary);
     for(i=0;i<n;i++){
-       fob.write((char*)&ob[i],sizeof(ob[i]));
+        fob.write((char*)&ob[i],sizeof(ob[i]));
     }
     fob.close();
 
