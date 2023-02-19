@@ -1,31 +1,21 @@
-//
-// Created by Varsha on 18-02-2023.
-//
-//Qn. Read your roll no, name and age from keyboard write to a data file stud.dat. Read the
-//file and display in a proper format.
+/*Qn. Read your roll no, name and age from keyboard write to a data file stud.dat.
+ * Read the file and display in a proper format.*/
+
 #include <iostream>
-#include <fstream>
 #include <string>
+#include <fstream>
 using namespace std;
 
-int main()
-{
-    string name;
-    int roll, age;
-    ofstream obj("stud.dat");
-    cout << "Enter your roll no: ";
-    cin >> roll;
-    cout << "Enter your name: ";
-    cin >> name;
-    cout << "Enter your age: ";
-    cin >> age;
-    obj << roll << " " << name << " " << age << endl;
-    obj.close();
-    ifstream obj1("stud.dat");
-    obj1 >> roll >> name >> age;
-    cout << "Roll no: " << roll << endl;
-    cout << "Name: " << name << endl;
-    cout << "Age: " << age << endl;
-    obj1.close();
-    return 0;
+int main(){
+    int roll_no, age, roll_no2, age2;
+    string name, name2;
+    cout << "Enter your roll no, name and age: ";
+    cin >> roll_no >> name >> age;
+    fstream fob;
+    fob.open("stud.dat",ios::in | ios::out);
+    fob << roll_no <<"\n"<< name <<"\n"<< age <<"\n";
+    fob.seekg(0);
+    fob >> roll_no2 >> name2 >> age2;
+    cout << "Roll no: " << roll_no2 << "\tName: " << name2 << "\tAge: " << age2 << endl;
 }
+
