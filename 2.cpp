@@ -21,3 +21,10 @@ public:
         cout<<day<<"/"<<mont[month-1]<<"/"<<year;
     }
 };
+
+int main(){
+    date d;
+    d.getdata();
+    d.display();
+    return 0;
+}
