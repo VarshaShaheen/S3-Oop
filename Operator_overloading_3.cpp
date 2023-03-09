@@ -14,10 +14,10 @@ public:
     void display(){
         cout<<"The value of sum is: "<<a<<endl;
     }
-    friend A add(A ob1, A ob2);
+    friend A operator +(A ob1, A ob2);
 };
 
-A add(A ob1, A ob2){
+A operator +(A ob1, A ob2){
     A temp;
     temp.a = ob1.a + ob2.a;
     return temp;
@@ -27,7 +27,7 @@ int main(){
     A ob1,ob2,ob3;
     ob1.init();
     ob2.init();
-    ob3 = add(ob1,ob2);
+    ob3 = ob1 + ob2;
     ob3.display();
     return 0;
 }
