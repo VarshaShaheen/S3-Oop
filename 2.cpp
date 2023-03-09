@@ -8,7 +8,7 @@ using namespace std;
 class date{
     int day,month,year;
     string mont[12] = {"Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"};
-    public:
+public:
     void getdata(){
         cout<<"Enter day: ";
         cin>>day;
