@@ -6,8 +6,8 @@ class A
 {
 public:
     ~A(){
-            i=10;
-            cout<<"destructor"<<endl;
+        i=10;
+        cout<<"destructor"<<endl;
     }
 };
 
