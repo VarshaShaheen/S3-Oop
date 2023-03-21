@@ -22,7 +22,7 @@ public:
 
 void transfer(savings &a,current &b){
     float x;
-    cout<<"Enter the amount to be transferred: ";
+    cout<<"Enter the amount to be transferred:";
     cin>>x;
     if(x <= b.cur){
         a.sav+=x;
@@ -30,9 +30,9 @@ void transfer(savings &a,current &b){
         cout<<"Savings account balance: "<<a.sav<<endl;
         cout<<"Current account balance: "<<b.cur<<endl;
     }
-   else{
-         cout<<"Insufficient balance in current account"<<endl;
-   }
+    else{
+        cout<<"Insufficient balance in current account"<<endl;
+    }
 }
 
 int main(){
