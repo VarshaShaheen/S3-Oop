@@ -11,11 +11,15 @@ using namespace std;
 class marks{
 private:
     static int max_mark,pass_mark;
+    int mark;
 public:
+    void init(int a){
+        mark=a;
+    }
     static string result(int a){
         if (a>=pass_mark && a<=max_mark)
             return "Pass";
-        else if(a<pass_mark && a<=max_mark){
+        else if(a<pass_mark){
             return "Fail";
         }
         else{
@@ -23,17 +27,27 @@ public:
         }
 
     }
-    void display(int a) const{
-        cout<<result(a);
+    void display() const{
+        cout<<result(mark)<<endl;
     }
 };
 int marks::pass_mark=40;
 int marks::max_mark=100;
 
 int main(){
-    marks m;
+    marks m[100];
+    int n, i;
     float a;
+    cout<<"Enter the number of students:"<<endl;
+    cin>>n;
     cout<<"Enter the marks";
-    cin>>a;
-    m.display(a);
+    for(i=0;i<n;i++){
+        cin>>a;
+        m[i].init(a);
+    }
+    for(i=0;i<n;i++){
+        cout<<"Student "<<i+1<<" is ";
+        m[i].display();
+    }
+    return 0;
 }
